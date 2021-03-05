@@ -5,6 +5,7 @@ import Avatar from './Components/UI/avatar';
 import Button from './Components/UI/button';
 import { Content, ContentLargeBold, ContentSmall } from './Components/Texts/Content';
 import { Card } from './Components/Containers/Card'
+import Input from './Components/Forms/Input';
 
 function App() {
   return (
@@ -31,6 +32,7 @@ function App() {
       <ContentLargeBold>sdjfhkjdhjfkh</ContentLargeBold>
       <ContentSmall>sdjfhkjdhjfkh</ContentSmall>
       <Card></Card>
+      <Input></Input>
     </div>
   );
 }
