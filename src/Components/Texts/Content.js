@@ -3,7 +3,7 @@ import { css } from "@emotion/react";
 
 
 const baseStyles = css`
-  text-align: center;
+  /* text-align: center; */
   font-weight: normal;
 `;
 

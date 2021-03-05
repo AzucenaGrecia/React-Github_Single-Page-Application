@@ -8,6 +8,7 @@ import { Card } from './Components/Containers/Card'
 import Icon from './Components/UI/icon';
 import gh from './assets/image1.png'
 import Input from './Components/Forms/Input';
+import { RepoResume } from './Components/Containers/ReṕoResume';
 
 function App() {
   return (
@@ -61,12 +62,45 @@ function App() {
         <div className="card_container_horizontal">
           <ContentSmall>Turn ES6+ code into readable vanilla ES5 with source maps and more!</ContentSmall>
         </div>
+        <RepoResume>
+          <div className="card_footer_section">
+            <Icon type="circle" fill="#F2C94C" size={15}></Icon>
+            <ContentSmall>gaearon</ContentSmall>
+          </div>
+
+          <div className="card_footer_section">
+            <Icon type="starLine" fill="#03053D" size={15}></Icon>
+            <ContentSmall>gaearon</ContentSmall>
+          </div>
+          
+          <div className="card_footer_section">
+            <Icon type="fork" fill="#03053D" size={15}></Icon>
+            <ContentSmall>gaearon</ContentSmall>
+          </div>
+        </RepoResume>
       </Card>
     
       <ContentSmall>sdjfhkjdhjfkh</ContentSmall>
       <Card></Card>
       <img src={gh}/>
       <Input></Input>
+
+      <RepoResume>
+        <div className="card_footer_section">
+          <Icon type="circle" fill="#F2C94C" size={15}></Icon>
+          <ContentSmall>gaearon</ContentSmall>
+        </div>
+
+        <div className="card_footer_section">
+          <Icon type="starLine" fill="#03053D" size={15}></Icon>
+          <ContentSmall>gaearon</ContentSmall>
+        </div>
+        
+        <div className="card_footer_section">
+          <Icon type="fork" fill="#03053D" size={15}></Icon>
+          <ContentSmall>gaearon</ContentSmall>
+        </div>
+      </RepoResume>
     </div>
   );
 }
