@@ -2,6 +2,7 @@ import './App.css';
 import { Heading1, Heading2 } from './Components/Texts/Heading';
 import { Global, css } from "@emotion/react";
 import Avatar from './Components/UI/avatar';
+import Button from './Components/UI/button';
 
 
 function App() {
@@ -24,6 +25,7 @@ function App() {
       <Heading2>hello</Heading2>
 
       <Avatar src="" placeholder="R" size="small"></Avatar>
+      <Button>Continue</Button>
     </div>
   );
 }
