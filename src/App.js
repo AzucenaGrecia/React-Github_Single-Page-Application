@@ -5,6 +5,7 @@ import Avatar from './Components/UI/avatar';
 import Button from './Components/UI/button';
 import { Content, ContentLargeBold, ContentSmall } from './Components/Texts/Content';
 import { Card } from './Components/Containers/Card'
+import Icon from './Components/UI/icon';
 
 function App() {
   return (
@@ -29,8 +30,37 @@ function App() {
       <Button>Continue</Button>
       <Content>sdjfhkjdhjfkh</Content>
       <ContentLargeBold>sdjfhkjdhjfkh</ContentLargeBold>
-      <ContentSmall>sdjfhkjdhjfkh</ContentSmall>
-      <Card></Card>
+      <ContentSmall>Turn ES6+ code into readable vanilla ES5 with source maps and more!</ContentSmall>
+      
+      <Card size="default">
+        <Icon type="followers" fill="#2D9CDB" size={60}></Icon>
+        <Heading2>64K</Heading2>
+        <Content>followers</Content>
+      </Card>
+
+      <Card size="favorites">
+        <Avatar src="" placeholder="R" size="small"></Avatar>
+        <div className="card_container_horizontal">
+          <Content>Dan Abramov</Content>
+          <ContentSmall>gaearon</ContentSmall>
+        </div>
+        <Icon type="star" fill="#F2C94C" size={25}></Icon>
+      </Card>
+
+      <Card size="favorites">
+        <Avatar src="" placeholder="R" size="small"></Avatar>
+        <div className="card_container_horizontal">
+          <Content>LazyBwoy</Content>
+        </div>
+      </Card>
+
+      <Card size="repo">
+        <ContentLargeBold>gaearon/6to5</ContentLargeBold>
+        <div className="card_container_horizontal">
+          <ContentSmall>Turn ES6+ code into readable vanilla ES5 with source maps and more!</ContentSmall>
+        </div>
+      </Card>
+    
     </div>
   );
 }
