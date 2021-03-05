@@ -80,14 +80,47 @@ function Search({ history, location }) {
     </>
   );
 
-
+  const ProfileView = () => (
+    <>
+      <Avatar src={data.avatar_url} placeholder={"NU"} />
+      <div className="username">
+        <ContentLargeBold>{data.name}</ContentLargeBold>
+        <Icon
+          /* onClick={() => toggleFavorite(favorites, data, setFavorites)}
+          type={getFavorite(favorites, data) ? "star" : "starLine"} */
+          type={"start"}
+          size={25}
+          fill="#F2C94C"
+        />
+      </div>
+      <Content
+        css={css`
+          min-height: 60px;
+        `}
+      >
+        {data.bio}
+      </Content>
+      <div className="follow-container">
+        {/* <Card>
+          <Icon type="followers" size={60} fill="#2D9CDB" />
+          <Heading2>{data.followers}</Heading2>
+          <Content>Followers</Content>
+        </Card>
+        <Card>
+          <Icon type="followings" size={60} fill="#F2994A" />
+          <Heading2>{data.following}</Heading2>
+          <Content>Followings</Content>
+        </Card> */}
+      </div>
+    </>
+  );
 
   return (
     <StyledDiv>
       <Input placeholder="username" />
       <div className="results">
         {!data && <NoData />}
-       {/*  {data && <ProfileView />} */}
+        {data && <ProfileView />}
       </div>
       <Navbar
         css={css`
