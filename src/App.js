@@ -1,6 +1,7 @@
 import './App.css';
 import { Heading1, Heading2 } from './Components/Texts/Heading';
 import { Global, css } from "@emotion/react";
+import Avatar from './Components/UI/avatar';
 import Button from './Components/UI/button';
 import { Content, ContentLargeBold, ContentSmall } from './Components/Texts/Content';
 
@@ -23,6 +24,8 @@ function App() {
       />
       <Heading1>hello</Heading1>
       <Heading2>hello</Heading2>
+
+      <Avatar src="" placeholder="R" size="small"></Avatar>
       <Button>Continue</Button>
       <Content>sdjfhkjdhjfkh</Content>
       <ContentLargeBold>sdjfhkjdhjfkh</ContentLargeBold>
