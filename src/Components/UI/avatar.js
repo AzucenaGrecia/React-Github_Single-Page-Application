@@ -1,8 +1,8 @@
 import styled from "@emotion/styled";
 
 const StyledImg = styled.div`
-  width: 60px;
-  height: 60px;
+  width: ${(props) => props.size};
+  height:  ${(props) => props.size};
   border-radius: 50%;
   background-image: url(${(props) => props.src});
   background-size: cover;
@@ -17,8 +17,15 @@ const StyledImg = styled.div`
   }
 `;
 
-function Avatar({ src, placeholder }) {
-  return <StyledImg src={src}>{!src && <p>{placeholder}</p>}</StyledImg>;
+const sizeObj = {
+  "medium": "60px",
+  "small": "40px"
+}
+
+
+function Avatar({ src, placeholder, size }) {
+  const sizeAvatar = sizeObj[size] || "60px";
+  return <StyledImg src={src } size={sizeAvatar}>{!src && <p>{placeholder}</p>}</StyledImg>;
 }
 
 export default Avatar;

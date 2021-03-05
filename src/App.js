@@ -23,7 +23,7 @@ function App() {
       <Heading1>hello</Heading1>
       <Heading2>hello</Heading2>
 
-      <Avatar src="" placeholder="R"></Avatar>
+      <Avatar src="" placeholder="R" size="small"></Avatar>
     </div>
   );
 }
