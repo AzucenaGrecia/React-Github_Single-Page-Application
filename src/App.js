@@ -5,7 +5,11 @@ import Avatar from './Components/UI/avatar';
 import Button from './Components/UI/button';
 import { Content, ContentLargeBold, ContentSmall } from './Components/Texts/Content';
 import { Card } from './Components/Containers/Card'
+<<<<<<< HEAD
 import gh from './assets/image1.png'
+=======
+import Input from './Components/Forms/Input';
+>>>>>>> main
 
 function App() {
   return (
@@ -32,7 +36,11 @@ function App() {
       <ContentLargeBold>sdjfhkjdhjfkh</ContentLargeBold>
       <ContentSmall>sdjfhkjdhjfkh</ContentSmall>
       <Card></Card>
+<<<<<<< HEAD
       <img src={gh}/>
+=======
+      <Input></Input>
+>>>>>>> main
     </div>
   );
 }
