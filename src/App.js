@@ -6,6 +6,7 @@ import Button from './Components/UI/button';
 import { Content, ContentLargeBold, ContentSmall } from './Components/Texts/Content';
 import { Card } from './Components/Containers/Card'
 import Input from './Components/Forms/Input';
+import Navbar from './Components/Containers/Navbar';
 
 function App() {
   return (
@@ -33,6 +34,14 @@ function App() {
       <ContentSmall>sdjfhkjdhjfkh</ContentSmall>
       <Card></Card>
       <Input></Input>
+
+      <Navbar
+        css={css`
+          position: fixed;
+          bottom: 0;
+          width: 100%;
+        `}
+      />
     </div>
   );
 }
