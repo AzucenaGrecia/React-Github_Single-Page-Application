@@ -2,6 +2,7 @@ import './App.css';
 import { Global, css } from "@emotion/react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import { Home } from './Pages/Home';
+import { Favorite } from './Pages/Favorite';
 function App() {
   return (
     <div>
@@ -24,6 +25,7 @@ function App() {
 
       <Router>
         <Switch>
+          <Route path="/favorites" component={Favorite}/>
           <Route path="/" component={Home} />
         </Switch>
       </Router>

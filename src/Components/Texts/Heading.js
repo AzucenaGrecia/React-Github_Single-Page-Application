@@ -1,3 +1,4 @@
+/** @jsxImportSource @emotion/react */
 import styled from '@emotion/styled'
 
 const StyledH1 = styled.h1`
@@ -25,9 +26,9 @@ function Heading1({children}){
 } 
 
 
-function Heading2({children}){
+function Heading2({children, styled }){
   return(
-    <StyledH2>{children}</StyledH2>
+    <StyledH2 css={styled}>{children}</StyledH2>
   );
  } 
 
