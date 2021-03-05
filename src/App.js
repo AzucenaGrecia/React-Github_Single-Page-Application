@@ -1,23 +1,26 @@
-import logo from './logo.svg';
 import './App.css';
+import { Heading1, Heading2 } from './Components/Texts/Heading';
+import { Global, css } from "@emotion/react";
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Global 
+        styles={css`
+          @import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@400;700&display=swap');
+          * {
+            font-family: 'Source Code Pro', monospace;
+            color: #000000;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+          }
+        `
+        }
+      />
+      <Heading1>hello</Heading1>
+      <Heading2>hello</Heading2>
     </div>
   );
 }
