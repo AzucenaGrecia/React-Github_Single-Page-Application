@@ -11,6 +11,7 @@ import Input from './Components/Forms/Input';
 import { RepoResume } from './Components/Containers/ReṕoResume';
 import Navbar from './Components/Containers/Navbar';
 import { LibraryApp } from './Components/library';
+import { Home } from './Pages/Home';
 function App() {
   return (
     <div>
@@ -23,12 +24,15 @@ function App() {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
+            background:  #E5E5E5;
           }
         `
         }
       />
      
-     <LibraryApp></LibraryApp>
+     {/* <LibraryApp></LibraryApp> */}
+
+      <Home />
 
     </div>
   );
