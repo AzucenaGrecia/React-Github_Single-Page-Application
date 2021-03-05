@@ -1,16 +1,6 @@
 import './App.css';
-import { Heading1, Heading2 } from './Components/Texts/Heading';
 import { Global, css } from "@emotion/react";
-import Avatar from './Components/UI/avatar';
-import Button from './Components/UI/button';
-import { Content, ContentLargeBold, ContentSmall } from './Components/Texts/Content';
-import { Card } from './Components/Containers/Card'
-import Icon from './Components/UI/icon';
-import gh from './assets/image1.png'
-import Input from './Components/Forms/Input';
-import { RepoResume } from './Components/Containers/ReṕoResume';
-import Navbar from './Components/Containers/Navbar';
-import { LibraryApp } from './Components/library';
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import { Home } from './Pages/Home';
 function App() {
   return (
@@ -32,7 +22,11 @@ function App() {
      
      {/* <LibraryApp></LibraryApp> */}
 
-      <Home />
+      <Router>
+        <Switch>
+          <Route path="/" component={Home} />
+        </Switch>
+      </Router>
 
     </div>
   );
