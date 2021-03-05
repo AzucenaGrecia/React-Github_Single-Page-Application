@@ -2,6 +2,7 @@ import './App.css';
 import { Heading1, Heading2 } from './Components/Texts/Heading';
 import { Global, css } from "@emotion/react";
 import Button from './Components/UI/button';
+import { Content, ContentLargeBold, ContentSmall } from './Components/Texts/Content';
 
 
 function App() {
@@ -23,6 +24,9 @@ function App() {
       <Heading1>hello</Heading1>
       <Heading2>hello</Heading2>
       <Button>Continue</Button>
+      <Content>sdjfhkjdhjfkh</Content>
+      <ContentLargeBold>sdjfhkjdhjfkh</ContentLargeBold>
+      <ContentSmall>sdjfhkjdhjfkh</ContentSmall>
     </div>
   );
 }
