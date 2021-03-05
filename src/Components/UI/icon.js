@@ -49,8 +49,8 @@ function Icon({ type, fill, size, onClick }) {
 
 export default Icon;
 
-{/* ***Todos los icons***
-<Icon type="home" size={60} fill="#BDBDBD"/>
+/* ***Todos los icons***
+<Icon type="home" size={60} fill="#BDBDBD"/>                                                                
 <Icon type="search" size={60} fill="#828282"/>
 <Icon type="star" size={60} fill="#BDBDBD"/>
 <Icon type="starLine" size={60} fill="03053D"/>
@@ -63,4 +63,4 @@ export default Icon;
 <Icon type="circle" size={30} fill="#F2C94C"/>
 <Icon type="fork" size={30} />
 <Icon type="github" size={60} />
- */}
+ */
