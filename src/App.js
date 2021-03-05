@@ -4,7 +4,7 @@ import { Global, css } from "@emotion/react";
 import Avatar from './Components/UI/avatar';
 import Button from './Components/UI/button';
 import { Content, ContentLargeBold, ContentSmall } from './Components/Texts/Content';
-
+import { Card } from './Components/Containers/Card'
 
 function App() {
   return (
@@ -30,6 +30,7 @@ function App() {
       <Content>sdjfhkjdhjfkh</Content>
       <ContentLargeBold>sdjfhkjdhjfkh</ContentLargeBold>
       <ContentSmall>sdjfhkjdhjfkh</ContentSmall>
+      <Card></Card>
     </div>
   );
 }
