@@ -3,7 +3,7 @@ import { Heading1, Heading2 } from './Components/Texts/Heading';
 import { Global, css } from "@emotion/react";
 import Button from './Components/UI/button';
 import { Content, ContentLargeBold, ContentSmall } from './Components/Texts/Content';
-
+import { Card } from './Components/Containers/Card'
 
 function App() {
   return (
@@ -27,6 +27,7 @@ function App() {
       <Content>sdjfhkjdhjfkh</Content>
       <ContentLargeBold>sdjfhkjdhjfkh</ContentLargeBold>
       <ContentSmall>sdjfhkjdhjfkh</ContentSmall>
+      <Card></Card>
     </div>
   );
 }
