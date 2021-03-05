@@ -35,16 +35,16 @@ const StyledDiv = styled.div`
   }
 `;
 
-/* function getLocationQuery(location) {
+function getLocationQuery(location) {
   const values = location.search.slice(1);
   const [_, value] = values.split("=");
   return value || "";
-} */
+}
 
 function Search({ history, location }) {
   const [loading, setLoading] = useState(false);
   const [data, setData] = useState(null);
-/*   const [query, setQuery] = useState(getLocationQuery(location)); */
+  const [query, setQuery] = useState(getLocationQuery(location));
   let [favorites, setFavorites] = useState(
     JSON.parse(localStorage.getItem("favorites")) || []
   );
@@ -119,8 +119,9 @@ function Search({ history, location }) {
     <StyledDiv>
       <Input placeholder="username" />
       <div className="results">
-        {!data && <NoData />}
-        {data && <ProfileView />}
+        <NoData />
+       {/*  {!data && <NoData />}
+        {data && <ProfileView />} */}
       </div>
       <Navbar
         css={css`

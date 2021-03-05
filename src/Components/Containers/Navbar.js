@@ -1,6 +1,6 @@
 /** @jsxImportSource @emotion/react */
 import styled from "@emotion/styled";
-/* import { Link, useLocation } from "react-router-dom"; */
+import { Link, useLocation } from "react-router-dom";
 import Icon from "../UI/icon";
 
 const StyledDiv = styled.div`
@@ -8,7 +8,6 @@ const StyledDiv = styled.div`
   padding: 8px 0;
   display: flex;
   justify-content: center;
-  background: #f2f2f2;
   box-shadow: 0px -2px 0px rgba(0, 0, 0, 0.25);
   .icons-container {
     width: 250px;
@@ -19,9 +18,9 @@ const StyledDiv = styled.div`
 `;
 
 function Navbar({ css }) {
-/*   const location = useLocation(); */
-/*   const selected = location.pathname; */
-  const selected = "/";
+  const location = useLocation();
+  const selected = location.pathname;
+  /* const selected = "/"; */
   const selectedOptions = {
     home: "/",
     search: "/search",
@@ -32,14 +31,14 @@ function Navbar({ css }) {
     <StyledDiv css={css}>
       <div className="icons-container">
         {icons.map((icon, index) => (
-
+          <Link to={selectedOptions[icon]} key={icon}>
             <Icon
               key={index}
               type={icon}
               fill={selected === selectedOptions[icon] ? "#828282" : "#BDBDBD"}
               size={50}
             />
-
+          </Link>
         ))}
       </div>
     </StyledDiv>
