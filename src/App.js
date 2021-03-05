@@ -9,6 +9,7 @@ import Icon from './Components/UI/icon';
 import gh from './assets/image1.png'
 import Input from './Components/Forms/Input';
 import { RepoResume } from './Components/Containers/ReṕoResume';
+import Search from './pages/search';
 
 function App() {
   return (
@@ -23,10 +24,14 @@ function App() {
             padding: 0;
             box-sizing: border-box;
           }
+          body {
+            background: #E5E5E5;
+          }
         `
         }
       />
-      <Heading1>hello</Heading1>
+      <Search />
+{/*       <Heading1>hello</Heading1>
       <Heading2>hello</Heading2>
 
       <Avatar src="" placeholder="R" size="small"></Avatar>
@@ -100,7 +105,7 @@ function App() {
           <Icon type="fork" fill="#03053D" size={15}></Icon>
           <ContentSmall>gaearon</ContentSmall>
         </div>
-      </RepoResume>
+      </RepoResume> */}
     </div>
   );
 }

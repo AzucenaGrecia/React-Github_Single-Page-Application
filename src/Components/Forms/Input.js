@@ -10,6 +10,7 @@ const StyledInput = styled.input`
   line-height: 25px;
   border: 1px solid transparent;
   transition: border 200ms;
+  text-align: center;
   &:focus {
     outline: none;
     border: 1px solid #2d9cdb;
