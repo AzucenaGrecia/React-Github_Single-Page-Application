@@ -8,7 +8,7 @@ import { Content, ContentLargeBold } from "../Components/Texts/Content";
 import Avatar from "../Components/UI/avatar";
 import { Card } from "../Components/Containers/Card";
 import { Heading2 } from "../Components/Texts/Heading";
-/* import GithubService from "../services/github_service"; */
+import GithubService from "../services/github_service";
 /* import { getFavorite, toggleFavorite } from "../helpers/favorites"; */
 
 const StyledDiv = styled.div`
@@ -31,13 +31,12 @@ const StyledDiv = styled.div`
     & > .follow-container {
       display: flex;
       gap: 16px;
-      & >.follow-container-content{
+      & > .follow-container-content {
         display: flex;
         flex-direction: column;
         gap: 16px;
       }
     }
-      
   }
 `;
 
@@ -48,26 +47,15 @@ function getLocationQuery(location) {
 }
 
 function Search({ history, location }) {
-  /* Uso dato Temporal  */
-  const AuxiliarData = {
-    name: "Robert",
-    avatar_url: "",
-    bio: "Bio Codeableee",
-    statFollowers: "64K" ,
-    statFollowings: "171",
-    statRepos: "249",
-    statGists: "72"
-  }
 
   const [loading, setLoading] = useState(false);
-  const [data, setData] = useState(AuxiliarData);  //null
+  const [data, setData] = useState(null);
   const [query, setQuery] = useState(getLocationQuery(location));
   let [favorites, setFavorites] = useState(
     JSON.parse(localStorage.getItem("favorites")) || []
   );
 
-
-/*   useEffect(() => {
+  useEffect(() => {
     async function fetchUser() {
       const gs = new GithubService();
       setLoading(true);
@@ -83,7 +71,7 @@ function Search({ history, location }) {
     }
 
     return () => clearTimeout(timerID);
-  }, [query]); */
+  }, [query]);
 
   useEffect(() => {
     localStorage.setItem("favorites", JSON.stringify(favorites));
@@ -103,7 +91,7 @@ function Search({ history, location }) {
       <Avatar src={data.avatar_url} placeholder={"NU"} />
       <div className="username">
         <ContentLargeBold>{data.name}</ContentLargeBold>
-        <Icon type="starLine" size={25} fill="#E0E0E0"/>
+        <Icon type="starLine" size={25} fill="#E0E0E0" />
       </div>
       <Content
         css={css`
@@ -116,25 +104,25 @@ function Search({ history, location }) {
         <div className="follow-container-content">
           <Card size="default">
             <Icon type="followers" size={60} fill="#2D9CDB" />
-            <Heading2>{data.statFollowers}</Heading2>
+            <Heading2>{data.followers}</Heading2>
             <Content>followers</Content>
           </Card>
           <Card size="default">
-            <Icon type="repos" size={60} fill="#219653"/>
-            <Heading2>{data.statRepos}</Heading2>
+            <Icon type="repos" size={60} fill="#219653" />
+            <Heading2>{data.public_repos}</Heading2>
             <Content>public repos</Content>
           </Card>
         </div>
         <div className="follow-container-content">
           <Card size="default">
-            <Icon type="followings" size={60} fill="#F2994A"/>
-            <Heading2>{data.statFollowings}</Heading2>
+            <Icon type="followings" size={60} fill="#F2994A" />
+            <Heading2>{data.following}</Heading2>
             <Content>followings</Content>
           </Card>
 
           <Card size="default">
-            <Icon type="gists" size={60} fill="#828282"/>
-            <Heading2>{data.statGists}</Heading2>
+            <Icon type="gists" size={60} fill="#828282" />
+            <Heading2>{data.public_gists}</Heading2>
             <Content>public gists</Content>
           </Card>
         </div>
@@ -144,10 +132,10 @@ function Search({ history, location }) {
 
   return (
     <StyledDiv>
-      <Input placeholder="username" />
+      <Input placeholder="username" value={query} onChange={(e) => setQuery(e.target.value)} />
       <div className="results">
-       {/*  <NoData /> */}
-       {/*  <ProfileView /> */}
+        {/*  <NoData /> */}
+        {/*  <ProfileView /> */}
         {!data && <NoData />}
         {data && <ProfileView />}
       </div>
