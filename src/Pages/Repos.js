@@ -72,14 +72,14 @@ function Repos({history, location, match}) {
               <Card key={card.full_name} size="repo">
                 <ContentLargeBold css={css`color:#2D9CDB;text-align: left;`}>{card.full_name}</ContentLargeBold>
                 <div className="card_container_horizontal">
-                  <ContentSmall>
+                  <ContentSmall css={css`text-align: left;`}>
                     {card.description}
                   </ContentSmall>
                 </div>
                 <RepoResume>
                   <div className="card_footer_section">
                     <Icon type="circle" fill={card.language?colors[card.language]:"aqua"} size={15}></Icon>
-                    <ContentSmall>{card.language}</ContentSmall>
+                    <ContentSmall >{card.language}</ContentSmall>
                   </div>
 
                   <div className="card_footer_section">

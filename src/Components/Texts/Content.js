@@ -12,6 +12,7 @@ const StyledContent = styled.p`
   ${baseStyles}
   font-size: 16px;
   line-height: 20px;
+  
 `;
 
 const StyledContentLB = styled(StyledContent)`
@@ -26,6 +27,8 @@ const StyledContentS = styled(StyledContent)`
   text-align: center;
   font-size: 12px;
   line-height: 15px;
+  ${prop => prop.css}
+  
 `;
 
 function Content ({children}) {
@@ -40,9 +43,9 @@ function ContentLargeBold ({children,css}) {
   )
 }
 
-function ContentSmall ({children}) {
+function ContentSmall ({children,css}) {
   return (
-    <StyledContentS>{children}</StyledContentS>
+    <StyledContentS css={css}>{children}</StyledContentS>
   )
 }
 
