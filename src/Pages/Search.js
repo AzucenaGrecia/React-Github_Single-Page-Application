@@ -6,7 +6,7 @@ import Input from "../Components/Forms/Input";
 import Icon from "../Components/UI/icon";
 import { Content, ContentLargeBold } from "../Components/Texts/Content";
 import Avatar from "../Components/UI/avatar";
-import Card from "../Components/Containers/Card";
+import { Card } from "../Components/Containers/Card";
 import { Heading2 } from "../Components/Texts/Heading";
 /* import GithubService from "../services/github_service"; */
 /* import { getFavorite, toggleFavorite } from "../helpers/favorites"; */
@@ -31,7 +31,13 @@ const StyledDiv = styled.div`
     & > .follow-container {
       display: flex;
       gap: 16px;
+      & >.follow-container-content{
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+      }
     }
+      
   }
 `;
 
@@ -42,12 +48,24 @@ function getLocationQuery(location) {
 }
 
 function Search({ history, location }) {
+  /* Uso dato Temporal  */
+  const AuxiliarData = {
+    name: "Robert",
+    avatar_url: "",
+    bio: "Bio Codeableee",
+    statFollowers: "64K" ,
+    statFollowings: "171",
+    statRepos: "249",
+    statGists: "72"
+  }
+
   const [loading, setLoading] = useState(false);
-  const [data, setData] = useState(null);
+  const [data, setData] = useState(AuxiliarData);  //null
   const [query, setQuery] = useState(getLocationQuery(location));
   let [favorites, setFavorites] = useState(
     JSON.parse(localStorage.getItem("favorites")) || []
   );
+
 
 /*   useEffect(() => {
     async function fetchUser() {
@@ -85,13 +103,7 @@ function Search({ history, location }) {
       <Avatar src={data.avatar_url} placeholder={"NU"} />
       <div className="username">
         <ContentLargeBold>{data.name}</ContentLargeBold>
-        <Icon
-          /* onClick={() => toggleFavorite(favorites, data, setFavorites)}
-          type={getFavorite(favorites, data) ? "star" : "starLine"} */
-          type={"start"}
-          size={25}
-          fill="#F2C94C"
-        />
+        <Icon type="starLine" size={25} fill="#E0E0E0"/>
       </div>
       <Content
         css={css`
@@ -101,16 +113,31 @@ function Search({ history, location }) {
         {data.bio}
       </Content>
       <div className="follow-container">
-        {/* <Card>
-          <Icon type="followers" size={60} fill="#2D9CDB" />
-          <Heading2>{data.followers}</Heading2>
-          <Content>Followers</Content>
-        </Card>
-        <Card>
-          <Icon type="followings" size={60} fill="#F2994A" />
-          <Heading2>{data.following}</Heading2>
-          <Content>Followings</Content>
-        </Card> */}
+        <div className="follow-container-content">
+          <Card size="default">
+            <Icon type="followers" size={60} fill="#2D9CDB" />
+            <Heading2>{data.statFollowers}</Heading2>
+            <Content>followers</Content>
+          </Card>
+          <Card size="default">
+            <Icon type="repos" size={60} fill="#219653"/>
+            <Heading2>{data.statRepos}</Heading2>
+            <Content>public repos</Content>
+          </Card>
+        </div>
+        <div className="follow-container-content">
+          <Card size="default">
+            <Icon type="followings" size={60} fill="#F2994A"/>
+            <Heading2>{data.statFollowings}</Heading2>
+            <Content>followings</Content>
+          </Card>
+
+          <Card size="default">
+            <Icon type="gists" size={60} fill="#828282"/>
+            <Heading2>{data.statGists}</Heading2>
+            <Content>public gists</Content>
+          </Card>
+        </div>
       </div>
     </>
   );
@@ -119,9 +146,10 @@ function Search({ history, location }) {
     <StyledDiv>
       <Input placeholder="username" />
       <div className="results">
-        <NoData />
-       {/*  {!data && <NoData />}
-        {data && <ProfileView />} */}
+       {/*  <NoData /> */}
+       {/*  <ProfileView /> */}
+        {!data && <NoData />}
+        {data && <ProfileView />}
       </div>
       <Navbar
         css={css`

@@ -15,10 +15,10 @@ function App() {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            background:  #E5E5E5;
+            /* background:  #F2F2F2; */
           }
           body {
-            background: #E5E5E5;
+            background: #F2F2F2;
           }
         `
         }
@@ -28,7 +28,7 @@ function App() {
 
       <Router>
         <Switch>
-          <Route path="/" component={Home} />
+         {/*  <Route path="/" component={Home} /> */}
           <Route path="/search" component={Search} />
         </Switch>
       </Router>
