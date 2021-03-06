@@ -2,6 +2,7 @@
 import styled from "@emotion/styled";
 import {css} from "@emotion/react";
 import {RiArrowLeftSLine,RiArrowRightSLine} from "react-icons/ri";
+import { useState } from "react";
 /* import { Link, useLocation } from "react-router-dom"; */
 
 const selected = css`
@@ -27,22 +28,23 @@ const PageStyle = styled.li`
   align-items: center;
   color:#4F4F4F;
   fill: #4F4F4F;
-  ${prop => prop.selector==1 ? selected:""}
+  ${prop => prop.selector== prop.data  ? selected : ""}
 
 `
 function Pagination({pages}){
 
   const listItems = [];
+  const [page, setPage] = useState(1)
 
   for (let i = 1; i <= pages; i++) {
-    listItems.push(<PageStyle key={i} selector={i}>{i}</PageStyle>);
+    listItems.push(<PageStyle key={i} selector={i} onClick={()=>setPage(i)} data={page}>{i}</PageStyle>);
   };
 
   return (
     <UlStyle>
-       <PageStyle key="star"><RiArrowLeftSLine/></PageStyle>
+       <PageStyle key="star" data={page}><RiArrowLeftSLine/></PageStyle>
         {listItems}
-        <PageStyle key="finish"><RiArrowRightSLine/></PageStyle>
+        <PageStyle key="finish" data={page}><RiArrowRightSLine/></PageStyle>
     </UlStyle>
   );
 }
