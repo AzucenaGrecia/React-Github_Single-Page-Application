@@ -8,6 +8,7 @@ import Avatar from "../Components/UI/avatar";
 import { toggleFavorite } from "../helpers/favorites";
 import { useEffect, useState } from "react";
 import Navbar from "../Components/Containers/Navbar";
+import Pagination from "../Components/Containers/Pagination";
 
 const StyledDiv = styled.div`
   width: 100vw;
@@ -44,7 +45,7 @@ function Favorite({history}) {
         </Heading2>
 
         <div className="container_cards">
-          {/* aqui iria em componnete de PAGINACIÓN */}
+          <Pagination pages={5}></Pagination>
           {favorites.map((card) => {
             return (
               <Card size="favorites">
