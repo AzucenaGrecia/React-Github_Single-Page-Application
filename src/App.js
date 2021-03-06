@@ -5,6 +5,7 @@ import { Home } from './Pages/Home';
 import { Favorite } from './Pages/Favorite';
 import { Followers } from './Pages/Followers';
 import { Repos } from './Pages/Repos';
+import { Followings } from './Pages/Followings';
 function App() {
   return (
     <div>
@@ -29,6 +30,7 @@ function App() {
         <Switch>
           <Route path="/favorites" component={Favorite}/>
           <Route path="/followers" component={Followers}/>
+          <Route path="/followings" component={Followings}/>
           <Route path="/repos" component={Repos}/>
           <Route path="/" component={Home} />
         </Switch>
