@@ -8,6 +8,7 @@ import { Card } from './Components/Containers/Card'
 import Icon from './Components/UI/icon';
 import gh from './assets/image1.png'
 import Input from './Components/Forms/Input';
+import Pagination from './Components/Containers/Pagination';
 
 function App() {
   return (
@@ -67,6 +68,7 @@ function App() {
       <Card></Card>
       <img src={gh}/>
       <Input></Input>
+      <Pagination pages={5}></Pagination>
     </div>
   );
 }
