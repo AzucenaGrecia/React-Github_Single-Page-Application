@@ -24,9 +24,9 @@ const sizeObj = {
 }
 
 
-function Avatar({ src, placeholder, size }) {
+function Avatar({ src, placeholder, size, onClick}) {
   const sizeAvatar = sizeObj[size] || "60px";
-  return <StyledImg src={src } size={sizeAvatar}>{!src && <p>{placeholder}</p>}</StyledImg>;
+  return <StyledImg onClick={onClick}src={src } size={sizeAvatar}>{!src && <p>{placeholder}</p>}</StyledImg>;
 }
 
 export default Avatar;

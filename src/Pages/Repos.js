@@ -8,6 +8,7 @@ import Icon from "../Components/UI/icon";
 import Navbar from "../Components/Containers/Navbar";
 import { useEffect, useState } from "react";
 import GithubService from "../services/github_service";
+import { Link } from "react-router-dom";
 
 const colors = {
   JavaScript: "yellow",
@@ -20,6 +21,12 @@ const colors = {
   CSS: "purple",
   'C++':"pink"
 }
+
+
+
+const StyleA = styled.a`
+text-decoration:none;
+`
 
 const StyledDiv = styled.div`
   width: 100vw;
@@ -70,7 +77,9 @@ function Repos({history, location, match}) {
           {arrCard.map((card) => {
             return (
               <Card key={card.full_name} size="repo">
+                <StyleA href={card.html_url} target="_blank" >
                 <ContentLargeBold css={css`color:#2D9CDB;text-align: left;`}>{card.full_name}</ContentLargeBold>
+                </StyleA>
                 <div className="card_container_horizontal">
                   <ContentSmall css={css`text-align: left;`}>
                     {card.description}

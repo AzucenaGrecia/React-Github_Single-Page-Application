@@ -31,9 +31,9 @@ const StyledContentS = styled(StyledContent)`
   
 `;
 
-function Content ({children}) {
+function Content ({children, onClick}) {
   return (
-    <StyledContent>{children}</StyledContent>
+    <StyledContent onClick={onClick}>{children}</StyledContent>
   )
 }
 

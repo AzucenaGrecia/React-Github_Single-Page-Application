@@ -60,6 +60,7 @@ function Followers({ history, location }) {
                   src={card.avatar_url || ""}
                   placeholder="R"
                   size="small"
+                  onClick={()=>history.push(`/search?user=${card.login}`)}
                 ></Avatar>
                 <div className="card_container_horizontal">
                   <Content>{card.login || ""}</Content>
