@@ -5,6 +5,8 @@ import { Card } from "../Components/Containers/Card";
 import { Content } from "../Components/Texts/Content";
 import Avatar from "../Components/UI/avatar";
 import Navbar from "../Components/Containers/Navbar";
+import GithubService from "../services/github_service";
+import { useEffect, useState } from "react";
 
 const StyledDiv = styled.div`
   width: 100vw;
@@ -19,8 +21,23 @@ const StyledDiv = styled.div`
   }
 `;
 
-function Followings() {
-  let arrCard = [1, 2, 3, 4];
+function getUsernameLocation(location) {
+  const value = location.pathname.split("/")[2];
+  return value || "";
+}
+
+function Followings({ location }) {
+  const [data, setData] = useState([]);
+  const query = getUsernameLocation(location);
+
+  useEffect(() => {
+    async function fetchFollowers() {
+      const gs = new GithubService();
+      const response = await gs.followings(query);
+      setData(response);
+    }
+    fetchFollowers();
+  }, []);
 
   return (
     <>
@@ -31,17 +48,18 @@ function Followings() {
             text-align: inherit;
           `}
         >
-          Followings(106)
+          Followings({data.length})
         </Heading2>
 
         <div className="container_cards">
           {/* aqui iria em componnete de PAGINACIÓN */}
-          {arrCard.map((card) => {
+          {data.map((card) => {
+            console.log(card)
             return (
               <Card size="favorites">
-                <Avatar src="" placeholder="R" size="small"></Avatar>
+                <Avatar src={card.avatar_url} placeholder="R" size="small"></Avatar>
                 <div className="card_container_horizontal">
-                  <Content>LazyBwoy</Content>
+                  <Content>{card.login}</Content>
                 </div>
               </Card>
             );
