@@ -9,6 +9,7 @@ import Navbar from "../Components/Containers/Navbar";
 import { useEffect, useState } from "react";
 import GithubService from "../services/github_service";
 import { Link } from "react-router-dom";
+import Pagination from "../Components/Containers/Pagination";
 
 const colors = {
   JavaScript: "yellow",
@@ -46,6 +47,8 @@ const StyledDiv = styled.div`
 function Repos({history, location, match}) {
   const [arrCard ,setarrCard] = useState([])
   const username = match.params.username
+  const pages = Math.floor(arrCard.length/6)
+  console.log(pages)
 
   useEffect(()=>{
     async function getRepos (){
@@ -73,7 +76,7 @@ function Repos({history, location, match}) {
         </Heading2>
 
         <div className="container_cards">
-          {/* aqui iria em componnete de PAGINACIÓN */}
+          <Pagination pages={pages} />
           {arrCard.map((card) => {
             return (
               <Card key={card.full_name} size="repo">
