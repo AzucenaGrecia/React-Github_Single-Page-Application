@@ -14,6 +14,7 @@ const StyledImg = styled.div`
     color: white;
     font-weight: bold;
     font-size: 30px;
+    background-color: transparent;
   }
 `;
 

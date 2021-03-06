@@ -42,6 +42,7 @@ function Icon({ type, fill, size, onClick }) {
       css={css`
         fill: ${fill};
         font-size: ${size}px;
+        background: transparent;
       `}
     />
   );
