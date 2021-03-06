@@ -26,7 +26,7 @@ function getUsernameLocation(location) {
   return value || "";
 }
 
-function Followings({ location }) {
+function Followings({ location ,history}) {
   const [data, setData] = useState([]);
   const query = getUsernameLocation(location);
 
@@ -57,7 +57,7 @@ function Followings({ location }) {
             console.log(card)
             return (
               <Card size="favorites">
-                <Avatar src={card.avatar_url} placeholder="R" size="small"></Avatar>
+                <Avatar src={card.avatar_url} placeholder="R" size="small" onClick={()=>history.push(`/search?user=${card.login}`)}></Avatar>
                 <div className="card_container_horizontal">
                   <Content>{card.login}</Content>
                 </div>

@@ -22,7 +22,7 @@ const StyledDiv = styled.div`
   }
 `;
 
-function Favorite() {
+function Favorite({history}) {
   const [favorites, setFavorites] = useState(
     JSON.parse(localStorage.getItem("favorites")) || []
   );
@@ -50,7 +50,7 @@ function Favorite() {
               <Card size="favorites">
                 <Avatar src={card.avatar_url} placeholder="R" size="small" />
                 <div className="card_container_horizontal">
-                  <Content>{card.name}</Content>
+                  <Content onClick={()=>history.push(`/search?user=${card.login}`)}>{card.name}</Content>
                   <ContentSmall>{card.login}</ContentSmall>
                 </div>
                 <Icon
