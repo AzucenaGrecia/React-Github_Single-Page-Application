@@ -1,5 +1,5 @@
 const BASE_URL = "https://api.github.com";
-const { REACT_APP_TOKEN  } = process.env;
+const { REACT_APP_TOKEN } = process.env;
 
 async function apiFetch(...args) {
   const response = await fetch(...args);
@@ -9,8 +9,7 @@ async function apiFetch(...args) {
 
 function GithubService() {
   if (!GithubService.instance) {
-    this.token = REACT_APP_TOKEN
-    ;
+    this.token = REACT_APP_TOKEN;
     GithubService.instance = this;
   }
   return GithubService.instance;
@@ -26,7 +25,7 @@ GithubService.prototype.profile = function (username) {
 };
 
 GithubService.prototype.followers = function (username) {
-  return apiFetch(`${BASE_URL}/users/${username}/followers`, {
+  return apiFetch(`${BASE_URL}/users/${username}/followers?per_page=1000`, {
     method: "GET",
     headers: {
       Authorization: `Bearer ${this.token}`,
@@ -35,7 +34,7 @@ GithubService.prototype.followers = function (username) {
 };
 
 GithubService.prototype.followings = function (username) {
-  return apiFetch(`${BASE_URL}/users/${username}/following`, {
+  return apiFetch(`${BASE_URL}/users/${username}/following?per_page=1000`, {
     method: "GET",
     headers: {
       Authorization: `Bearer ${this.token}`,
@@ -44,7 +43,7 @@ GithubService.prototype.followings = function (username) {
 };
 
 GithubService.prototype.repos = function (username) {
-  return apiFetch(`${BASE_URL}/users/${username}/repos?per_page=100`, {
+  return apiFetch(`${BASE_URL}/users/${username}/repos?per_page=1000`, {
     method: "GET",
     headers: {
       Authorization: `Bearer ${this.token}`,
