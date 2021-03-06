@@ -17,7 +17,7 @@ function GithubService() {
   return GithubService.instance;
 }
 
-GithubService.prototype.profile = function () {
+GithubService.prototype.profile = function (username) {
   return apiFetch(`${BASE_URL}/users/${username}`, {
     method: "GET",
     headers: {
@@ -26,4 +26,30 @@ GithubService.prototype.profile = function () {
   });
 };
 
+GithubService.prototype.followers = function (username) {
+  return apiFetch(`${BASE_URL}/users/${username}/followers`, {
+    method: "GET",
+    headers: {
+      Authorization: `Basic ${this.token}`,
+    },
+  });
+};
+
+GithubService.prototype.followings = function (username) {
+  return apiFetch(`${BASE_URL}/users/${username}/following`, {
+    method: "GET",
+    headers: {
+      Authorization: `Basic ${this.token}`,
+    },
+  });
+};
+
+GithubService.prototype.repos = function (username) {
+  return apiFetch(`${BASE_URL}/users/${username}/repos`, {
+    method: "GET",
+    headers: {
+      Authorization: `Basic ${this.token}`,
+    },
+  });
+};
 export default GithubService;
