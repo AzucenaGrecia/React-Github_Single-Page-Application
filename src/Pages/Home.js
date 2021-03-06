@@ -5,7 +5,7 @@ import Navbar from "../Components/Containers/Navbar";
 import styled from "@emotion/styled";
 import { css } from "@emotion/react";
 
-function Home() {
+function Home({ history }) {
   const StyledDiv = styled.div`
     width: 100vw;
     height: 100vh;
@@ -26,7 +26,7 @@ function Home() {
         Welcome to Github Users
       </Heading1>
       <img src={gh} />
-      <Button>Continue</Button>
+      <Button onClick={(e) => history.push("/search")}>Continue</Button>
       <Navbar
         css={css`
           position: fixed;

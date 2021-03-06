@@ -36,6 +36,7 @@ function App() {
           <Route path="/favorites" component={Favorite}/>
           <Route path="/followers" component={Followers}/>
           <Route path="/followings" component={Followings}/>
+          <Route  path="/search" component={Search}/>
           <Route path="/repos" component={Repos}/>
           <Route path="/" component={Home} />
         </Switch>
