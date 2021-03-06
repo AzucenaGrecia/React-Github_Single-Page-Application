@@ -114,22 +114,30 @@ function Search({ history, location }) {
 
       <div className="follow-container">
         <div className="follow-container-content">
-          
-            <Card size="default" onClick={()=>history.push(`/users/${data.login}/followers`)}>
-              <Icon type="followers" size={60} fill="#2D9CDB" />
-              <Heading2>{data.followers}</Heading2>
-              <Content>followers</Content>
-            </Card>
-                   
+          <Card
+            size="default"
+            onClick={() => history.push(`/users/${data.login}/followers`)}
+          >
+            <Icon type="followers" size={60} fill="#2D9CDB" />
+            <Heading2>{data.followers}</Heading2>
+            <Content>followers</Content>
+          </Card>
 
-          <Card size="default">
+          <Card
+            size="default"
+            onClick={() => history.push(`/users/${data.login}/repos`)}
+          >
             <Icon type="repos" size={60} fill="#219653" />
             <Heading2>{data.public_repos}</Heading2>
             <Content>public repos</Content>
           </Card>
         </div>
+
         <div className="follow-container-content">
-          <Card size="default">
+          <Card
+            size="default"
+            onClick={() => history.push(`/users/${data.login}/followings`)}
+          >
             <Icon type="followings" size={60} fill="#F2994A" />
             <Heading2>{data.following}</Heading2>
             <Content>followings</Content>

@@ -30,11 +30,11 @@ function App() {
       <Router>
         <Switch>
           <Route path="/users/:username/followers" component={Followers} />
+          <Route path="/users/:username/followings" component={Followings} />
+          <Route path="/users/:username/repos" component={Repos} />
           <Route path="/search" component={Search} />
           <Route path="/favorites" component={Favorite} />
-          <Route path="/followings" component={Followings} />
           <Route path="/search" component={Search} />
-          <Route path="/repos" component={Repos} />
           <Route path="/" component={Home} />
         </Switch>
       </Router>
