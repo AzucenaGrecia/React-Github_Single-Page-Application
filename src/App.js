@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import { Home } from './Pages/Home';
 import { Favorite } from './Pages/Favorite';
 import { Followers } from './Pages/Followers';
+import { Repos } from './Pages/Repos';
 function App() {
   return (
     <div>
@@ -28,6 +29,7 @@ function App() {
         <Switch>
           <Route path="/favorites" component={Favorite}/>
           <Route path="/followers" component={Followers}/>
+          <Route path="/repos" component={Repos}/>
           <Route path="/" component={Home} />
         </Switch>
       </Router>
