@@ -94,7 +94,7 @@ function Search({ history, location }) {
           onClick={() => toggleFavorite(favorites, data, setFavorites)}
           type={getFavorite(favorites, data) ? "star" : "starLine"}
           size={25}
-          fill="#E0E0E0"
+          fill="#F2C94C"
         />
       </div>
       <Content
