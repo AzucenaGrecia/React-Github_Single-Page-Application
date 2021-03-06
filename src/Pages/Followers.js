@@ -28,10 +28,15 @@ function getUsernameLocation(location) {
 }
 
 function getPage(location) {
-  if (location.search==""){
+  if (location.search == "") {
     return 1;
   }
   const value = parseInt(location.search.split("=")[1]);
+  return value;
+}
+
+function getPath(location) {
+  const value = location.pathname.split("/").slice(-1).join();
   return value;
 }
 
@@ -41,7 +46,7 @@ function Followers({ history, location }) {
   const limit = 6;
   const totalPages = Math.ceil(data.length / limit);
   const currentPage = getPage(location);
- 
+  const path = getPath(location);
 
   useEffect(() => {
     async function fetchFollowers() {
@@ -65,7 +70,7 @@ function Followers({ history, location }) {
         </Heading2>
 
         <div className="container_cards">
-          <Pagination pages={totalPages} />
+          <Pagination pages={totalPages} path={path} />
           {data
             .slice((currentPage - 1) * limit, currentPage * limit)
             .map((card) => {

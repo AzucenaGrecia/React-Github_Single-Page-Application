@@ -30,7 +30,7 @@ const LIStyle = styled.li`
   fill: #4f4f4f;
   ${(prop) => (prop.selector == prop.data ? selected : "")}
 `;
-function Pagination({ pages }) {
+function Pagination({ pages, path }) {
   const listItems = [];
   const [page, setPage] = useState(1);
   const history = useHistory();
@@ -42,7 +42,7 @@ function Pagination({ pages }) {
         selector={i}
         onClick={() => {
           setPage(i);
-          history.push(`/users/codekacode/followers?page=${i}`)
+          history.push(`/users/codekacode/${path}?page=${i}`);
         }}
         data={page}
       >
