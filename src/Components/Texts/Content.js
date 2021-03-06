@@ -3,7 +3,6 @@ import { css } from "@emotion/react";
 
 
 const baseStyles = css`
-  /* text-align: center; */
   font-weight: normal;
   background: transparent;
   
@@ -16,12 +15,14 @@ const StyledContent = styled.p`
 `;
 
 const StyledContentLB = styled(StyledContent)`
+  text-align: center;
   font-weight: bold;
   font-size: 20px;
   line-height: 25px;
 `;
 
 const StyledContentS = styled(StyledContent)`
+  text-align: center;
   font-size: 12px;
   line-height: 15px;
 `;

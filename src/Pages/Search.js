@@ -10,6 +10,7 @@ import { Card } from "../Components/Containers/Card";
 import { Heading2 } from "../Components/Texts/Heading";
 import GithubService from "../services/github_service";
 import { getFavorite, toggleFavorite } from "../helpers/favorites";
+import { Link, useLocation } from "react-router-dom";
 
 const StyledDiv = styled.div`
   width: 100vw;
@@ -85,6 +86,12 @@ function Search({ history, location }) {
     </>
   );
 
+  const selectedOptions = {
+    followers: "/followers",
+    followings: "/followings",
+    repos: "/repos",
+  };
+
   const ProfileView = () => (
     <>
       <Avatar src={data.avatar_url} placeholder={"NU"} />
@@ -104,21 +111,33 @@ function Search({ history, location }) {
       >
         {data.bio}
       </Content>
+
       <div className="follow-container">
         <div className="follow-container-content">
-          <Card size="default">
+          <Card
+            size="default"
+            onClick={() => history.push(`/users/${data.login}/followers`)}
+          >
             <Icon type="followers" size={60} fill="#2D9CDB" />
             <Heading2>{data.followers}</Heading2>
             <Content>followers</Content>
           </Card>
-          <Card size="default">
+
+          <Card
+            size="default"
+            onClick={() => history.push(`/users/${data.login}/repos`)}
+          >
             <Icon type="repos" size={60} fill="#219653" />
             <Heading2>{data.public_repos}</Heading2>
             <Content>public repos</Content>
           </Card>
         </div>
+
         <div className="follow-container-content">
-          <Card size="default">
+          <Card
+            size="default"
+            onClick={() => history.push(`/users/${data.login}/followings`)}
+          >
             <Icon type="followings" size={60} fill="#F2994A" />
             <Heading2>{data.following}</Heading2>
             <Content>followings</Content>
