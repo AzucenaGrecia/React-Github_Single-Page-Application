@@ -19,6 +19,7 @@ const StyledContentLB = styled(StyledContent)`
   font-weight: bold;
   font-size: 20px;
   line-height: 25px;
+  ${prop => prop.css}
 `;
 
 const StyledContentS = styled(StyledContent)`
@@ -33,9 +34,9 @@ function Content ({children}) {
   )
 }
 
-function ContentLargeBold ({children}) {
+function ContentLargeBold ({children,css}) {
   return (
-    <StyledContentLB>{children}</StyledContentLB>
+    <StyledContentLB css={css}>{children}</StyledContentLB>
   )
 }
 
