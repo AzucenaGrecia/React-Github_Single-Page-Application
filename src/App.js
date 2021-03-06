@@ -7,6 +7,7 @@ import { Favorite } from './Pages/Favorite';
 import { Followers } from './Pages/Followers';
 import { Repos } from './Pages/Repos';
 import { Followings } from './Pages/Followings';
+import GithubService from './services/github_service';
 function App() {
   return (
     <div>
@@ -19,7 +20,6 @@ function App() {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            /* background:  #F2F2F2; */
           }
           body {
             background: #F2F2F2;
@@ -28,14 +28,13 @@ function App() {
         }
       />
      
-     {/* <LibraryApp></LibraryApp> */}
-
       <Router>
         <Switch>
           <Route path="/search" component={Search} />
           <Route path="/favorites" component={Favorite}/>
           <Route path="/followers" component={Followers}/>
           <Route path="/followings" component={Followings}/>
+          <Route  path="/search" component={Search}/>
           <Route path="/repos" component={Repos}/>
           <Route path="/" component={Home} />
         </Switch>
