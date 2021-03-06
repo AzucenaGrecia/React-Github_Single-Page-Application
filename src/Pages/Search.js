@@ -9,7 +9,7 @@ import Avatar from "../Components/UI/avatar";
 import { Card } from "../Components/Containers/Card";
 import { Heading2 } from "../Components/Texts/Heading";
 import GithubService from "../services/github_service";
-/* import { getFavorite, toggleFavorite } from "../helpers/favorites"; */
+import { getFavorite, toggleFavorite } from "../helpers/favorites";
 
 const StyledDiv = styled.div`
   width: 100vw;
@@ -47,7 +47,6 @@ function getLocationQuery(location) {
 }
 
 function Search({ history, location }) {
-
   const [loading, setLoading] = useState(false);
   const [data, setData] = useState(null);
   const [query, setQuery] = useState(getLocationQuery(location));
@@ -91,7 +90,12 @@ function Search({ history, location }) {
       <Avatar src={data.avatar_url} placeholder={"NU"} />
       <div className="username">
         <ContentLargeBold>{data.name}</ContentLargeBold>
-        <Icon type="starLine" size={25} fill="#E0E0E0" />
+        <Icon
+          onClick={() => toggleFavorite(favorites, data, setFavorites)}
+          type={getFavorite(favorites, data) ? "star" : "starLine"}
+          size={25}
+          fill="#E0E0E0"
+        />
       </div>
       <Content
         css={css`
@@ -132,7 +136,11 @@ function Search({ history, location }) {
 
   return (
     <StyledDiv>
-      <Input placeholder="username" value={query} onChange={(e) => setQuery(e.target.value)} />
+      <Input
+        placeholder="username"
+        value={query}
+        onChange={(e) => setQuery(e.target.value)}
+      />
       <div className="results">
         {/*  <NoData /> */}
         {/*  <ProfileView /> */}
