@@ -36,6 +36,7 @@ const StyledCard = styled.div`
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+    background-color:transparent;
     margin-left: ${(props)=>sizes[props.size]? sizes[props.size].marginLeft : sizes.default.marginLeft};
   }
 `;

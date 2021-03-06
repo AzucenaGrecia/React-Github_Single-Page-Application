@@ -3,6 +3,9 @@ import { Global, css } from "@emotion/react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import { Home } from './Pages/Home';
 import Search from "./Pages/Search";
+import { Favorite } from './Pages/Favorite';
+import { Followers } from './Pages/Followers';
+import { Repos } from './Pages/Repos';
 function App() {
   return (
     <div>
@@ -28,8 +31,11 @@ function App() {
 
       <Router>
         <Switch>
-         {/*  <Route path="/" component={Home} /> */}
           <Route path="/search" component={Search} />
+          <Route path="/favorites" component={Favorite}/>
+          <Route path="/followers" component={Followers}/>
+          <Route path="/repos" component={Repos}/>
+          <Route path="/" component={Home} />
         </Switch>
       </Router>
 
