@@ -71,9 +71,14 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
 
 <h1>Sección en Español 🇪🇸</h1>
-<h2>Descripción del proyecto: </h2>
-<h2>Pasos para correr el proyecto: </h2>
-<h2>Tecnologias usadas: </h2>
-<h2>Curiosidades sobre el proyecto:</h2>
+<h2>🤓 Descripción del proyecto: </h2>
+Trabajo grupal realizado durante el Bootcamp de Codeable. 
+El proyecto consiste en poder desarrollar un Sinple Page Application usando una librería de JavaScript llamada React. 
+Las principales funcionalidades son: 
+  ✔️ Buscar a un usuario de GitHub a través de de username
+  ✔️ Crear un lista de usuarios favoritos de Github, dentro de la misma aplicación.
+  ✔️ Obtener los Followers, Followings y Repositorios de un usurario de GitHub. 
+<h2>👣 Pasos para correr el proyecto: </h2>
+<h2>🤖 Tecnologias usadas: </h2>
+<h2>💡 Curiosidades sobre el proyecto:</h2>
 
-<h2>Detalles </h2>
