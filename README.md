@@ -75,7 +75,10 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 <p>Trabajo grupal realizado durante el Bootcamp de Codeable.<br> 
 El proyecto consiste en poder desarrollar un Single Page Application (SPA) usando una librería de JavaScript llamada React. <br>
 ⚠️ Este proyecto fue conatruido con el package manager Yarn, por lo que todos los comandos seran usando <code>yarn</code> y no <code>nmp</code> <br>
-  recomiendo leer 👓 la [documentación](https://github.com/facebook/create-react-app) oficial de React, para que revises que otros requisitod previos requires para correr un apliación Recat en tu computadora. <br>
+  Recomiendo leer la documentación oficial de React, para revisar requisitos previos para correr esta apliación en tu computadora sin problemas. <br>
+  <strong>Documentacion</strong> </br>
+  <li>https://github.com/facebook/create-react-app</li>
+  <li>https://reactjs.org/docs/getting-started.html</li>
 Las principales <strong>funcionalidades</strong> son: </p>
 <ul> 
   <li>Buscar a un usuario de GitHub a través de de username</li>
