@@ -72,9 +72,9 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 
 <h1>Sección en Español 🇪🇸</h1>
 <h2>🤓 Descripción del proyecto: </h2>
-Trabajo grupal realizado durante el Bootcamp de Codeable. 
-El proyecto consiste en poder desarrollar un Sinple Page Application usando una librería de JavaScript llamada React.
-### Las principales funcionalidades son:
+<p>Trabajo grupal realizado durante el Bootcamp de Codeable.<br> 
+El proyecto consiste en poder desarrollar un Sinple Page Application usando una librería de JavaScript llamada React. <br>
+Las principales funcionalidades son: </p>
 <ul> 
   <li>Buscar a un usuario de GitHub a través de de username</li>
   <li>Crear un lista de usuarios favoritos de Github, dentro de la misma aplicación.</li>
