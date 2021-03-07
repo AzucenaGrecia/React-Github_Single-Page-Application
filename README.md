@@ -1,4 +1,4 @@
-<h1>English SEction</h1>
+<h1 style="color:blue;">English Section</h1>
 # About the Project
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
