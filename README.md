@@ -72,13 +72,14 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 
 <h1>Sección en Español 🇪🇸</h1>
 <h2>🤓 Descripción del proyecto: </h2>
-<p>Trabajo grupal realizado durante el Bootcamp de Codeable.<br> 
-El proyecto consiste en poder desarrollar un Single Page Application (SPA) usando una librería de JavaScript llamada React. <br>
+<p>✔️Trabajo grupal realizado durante el Bootcamp de Codeable.<br> 
+✔️El proyecto consiste en poder desarrollar un Single Page Application (SPA) usando una librería de JavaScript llamada React. <br>
 ⚠️ Este proyecto fue conatruido con el package manager Yarn, por lo que todos los comandos seran usando <code>yarn</code> y no <code>nmp</code> <br>
-  Recomiendo leer la documentación oficial de React, para revisar requisitos previos para correr esta apliación en tu computadora sin problemas. <br>
-  <strong>Documentacion</strong> </br>
+  ✔️Recomiendo leer la documentación oficial de React, para revisar requisitos previos para correr esta apliación en tu computadora sin problemas. <br>
+  <strong>Documentacion: </strong> </br>
   <li>https://github.com/facebook/create-react-app</li>
-  <li>https://reactjs.org/docs/getting-started.html</li>
+  <li>https://yarnpkg.com/getting-started</li>
+  <li>https://reactjs.org/docs/getting-started.html</li> <br>
 Las principales <strong>funcionalidades</strong> son: </p>
 <ul> 
   <li>Buscar a un usuario de GitHub a través de de username</li>
@@ -89,7 +90,7 @@ Las principales <strong>funcionalidades</strong> son: </p>
 <ul>
   <li> corre en tu consola : <code>yarn install</code> </Li>
   <li> corre en tu consola : <code>yarn start</code> </Li>
-  <li> Ya estas listo para usar la apliccación </Li>
+  <li> Relax, ya estas listo! </Li>
 </ul>
 <h2>🤖 Tecnologias usadas: </h2>
 <h2>💡 Curiosidades sobre el proyecto:</h2>
