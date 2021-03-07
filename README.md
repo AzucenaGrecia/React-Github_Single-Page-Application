@@ -1,4 +1,5 @@
-# Getting Started with Create React App
+<h1>English SEction</h1>
+# About the Project
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
