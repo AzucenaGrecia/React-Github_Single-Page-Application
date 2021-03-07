@@ -72,10 +72,10 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 
 <h1>Sección en Español 🇪🇸</h1>
 <h2>🤓 Descripción del proyecto: </h2>
-<p>✔️Trabajo grupal realizado durante el Bootcamp de Codeable.<br> 
-✔️El proyecto consiste en poder desarrollar un Single Page Application (SPA) usando una librería de JavaScript llamada React. <br>
-⚠️ Este proyecto fue conatruido con el package manager Yarn, por lo que todos los comandos seran usando <code>yarn</code> y no <code>nmp</code> <br>
-  ✔️Recomiendo leer la documentación oficial de React, para revisar requisitos previos para correr esta apliación en tu computadora sin problemas. <br>
+<p>✔️ Trabajo grupal realizado durante el Bootcamp de Codeable.<br> 
+✔️ El proyecto consiste en poder desarrollar un Single Page Application (SPA) usando una librería de JavaScript llamada React. <br>
+⚠️ Este proyecto fue construido con el <strong> package manager Yarn </strong>, por lo que los comandos se usará <code>yarn</code> y no <code>nmp</code> <br>
+  ✔️ Recomiendo leer la documentación oficial de React y Yarn: <br>
   <strong>Documentacion: </strong> </br>
   <li>https://github.com/facebook/create-react-app</li>
   <li>https://yarnpkg.com/getting-started</li>
@@ -93,5 +93,13 @@ Las principales <strong>funcionalidades</strong> son: </p>
   <li> Relax, ya estas listo! </Li>
 </ul>
 <h2>🤖 Tecnologias usadas: </h2>
+<ul>
+  <p>✔️ React</p>
+  <p>✔️ Java Script</p>
+  <p>✔️ HTML</p>
+  <p>✔️ CSS</p>
+  <p>✔️ Libreria @Emotion (para los componentes estilizados con JS)</p>
+  <p>✔️ Libreria ReactRouter (para manejo de rutas)</p>
+</ul>
 <h2>💡 Curiosidades sobre el proyecto:</h2>
 
