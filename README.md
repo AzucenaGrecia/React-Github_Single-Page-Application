@@ -29,6 +29,10 @@ Las principales <strong>funcionalidades</strong> son: </p>
   <p>✔️ Libreria @Emotion (para los componentes estilizados con JS)</p>
   <p>✔️ Libreria ReactRouter (para manejo de rutas)</p>
 </ul>
-<h2>💡 Curiosidades sobre el proyecto:</h2>
+<h2>💡😏 Curiosidades sobre el proyecto:</h2>
+<ul>
+  <p> React</p>
+  <p>✔️ Java Script</p>
+</ul>
 
 <h1>English Section 🇺🇸....( 🚧 under construction 🚧)</h1>
