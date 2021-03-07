@@ -74,6 +74,7 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 <h2>🤓 Descripción del proyecto: </h2>
 <p>Trabajo grupal realizado durante el Bootcamp de Codeable.<br> 
 El proyecto consiste en poder desarrollar un Single Page Application (SPA) usando una librería de JavaScript llamada React. <br>
+⚠️ este poryecto fue contruido con Yarn 
 Las principales <strong>funcionalidades</strong> son: </p>
 <ul> 
   <li>Buscar a un usuario de GitHub a través de de username</li>
