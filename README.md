@@ -82,7 +82,7 @@ Las principales <strong>funcionalidades</strong> son: </p>
 </ul>  
 <h2>👣 Pasos para correr el proyecto: </h2>
 <ul>
-  <li> corre en tu consola : `yarn start` </Li>
+  <li> corre en tu consola : <code>`yarn start`</code> </Li>
 </ul>
 <h2>🤖 Tecnologias usadas: </h2>
 <h2>💡 Curiosidades sobre el proyecto:</h2>
