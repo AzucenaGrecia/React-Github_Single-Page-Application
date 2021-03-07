@@ -31,8 +31,8 @@ Las principales <strong>funcionalidades</strong> son: </p>
 </ul>
 <h2>💡😏 Curiosidades sobre el proyecto:</h2>
 <ul>
-  <p> React</p>
-  <p>✔️ Java Script</p>
+  <p>✔️ Se implemnto un patron <code>debounce</code> para las llamadas a las APIS</p>
+  <p>✔️ Se implemnto un <strong>software design pattern</strong> llamado Singleton.</p>
 </ul>
 
 <h1>English Section 🇺🇸....( 🚧 under construction 🚧)</h1>
