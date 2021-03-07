@@ -81,6 +81,9 @@ Las principales <strong>funcionalidades</strong> son: </p>
   <li>Obtener los Followers, Followings y Repositorios de un usurario de GitHub.</li> 
 </ul>  
 <h2>👣 Pasos para correr el proyecto: </h2>
+<ul>
+  <li> corre en tu consola : `yarn start` </Li>
+</ul>
 <h2>🤖 Tecnologias usadas: </h2>
 <h2>💡 Curiosidades sobre el proyecto:</h2>
 
